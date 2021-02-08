@@ -170,8 +170,6 @@ func (r *RuneBuffer) WriteRune(s rune) {
 	if r.idx < len(r.buf) {
 		r.w.Write([]byte("\033[" + strconv.Itoa(len(tail)-1) + "D"))
 	}
-
-	r.w.Write([]byte("JEBELINO"))
 }
 
 func (r *RuneBuffer) WriteRunes(s []rune) {
